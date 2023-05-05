@@ -31,8 +31,8 @@ public class controller {
 
 
     //Set the path to testFolder, and shows in the text field the file that has been selected. Byte Array ready to Output
-    public void chooseFile(ActionEvent actionEvent) throws IOException, InterruptedException {
-        File path = new File("C:/test folder");
+    public void chooseFile() throws IOException {
+        File path = new File("C:/");
         fc.setInitialDirectory(path);
         File file = fc.showOpenDialog(new Stage());
         filePicked.setText(file.toString());
@@ -42,7 +42,7 @@ public class controller {
     }
     @FXML
     //Scans url, ready for next action
-    protected void scanURL(ActionEvent e) throws IOException, InterruptedException, URISyntaxException {
+    protected void scanURL() throws IOException, InterruptedException, URISyntaxException {
         neo = new api();
         String site = filePicked.getText();
         neo.urlScan(site);
@@ -50,7 +50,7 @@ public class controller {
 
     @FXML
     //shows URL report
-    protected void showReport(ActionEvent e) throws IOException, InterruptedException {
+    protected void showReport() throws IOException, InterruptedException {
         neo = new api();
         String myReport = neo.report(fr.md5);
         fr.showReport(myReport);
