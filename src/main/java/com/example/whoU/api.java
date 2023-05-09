@@ -38,7 +38,7 @@ public class api {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://www.virustotal.com/api/v3/files/" + md5Str))
                 .header("accept", "application/json")
-                .header("x-apikey", "0621432fce7383c1bc2986859c3dea0258aedad3dea59b55e89f075133ec9ec1")
+                .header("x-apikey", "")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
@@ -54,7 +54,7 @@ public class api {
 //                .header("accept", "application/json")
 //                .header("Content-Type", "text/plain")
 //                .header("content-diposition", file.toString())
-//                .header("x-apikey", "0621432fce7383c1bc2986859c3dea0258aedad3dea59b55e89f075133ec9ec1")
+//                .header("x-apikey", "")
 //                .POST((HttpRequest.BodyPublishers.ofFile(Paths.get(file.toString()))))
 //                .build();
 //
@@ -68,7 +68,7 @@ public class api {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://www.virustotal.com/api/v3/urls"))
                 .header("accept", "application/json")
-                .header("x-apikey", "0621432fce7383c1bc2986859c3dea0258aedad3dea59b55e89f075133ec9ec1")
+                .header("x-apikey", "")
                 .header("content-type", "application/x-www-form-urlencoded")
                 .method("POST", HttpRequest.BodyPublishers.ofString("url=" + url))
                 .build();
