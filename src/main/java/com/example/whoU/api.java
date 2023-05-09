@@ -20,7 +20,7 @@ import java.util.List;
 //Create an object,input a file into this class
 public class api {
 
-    String apiKey = "0621432fce7383c1bc2986859c3dea0258aedad3dea59b55e89f075133ec9ec1";
+    String apiKey;
 
     //Empty constructor
     public api() throws IOException, InterruptedException {
